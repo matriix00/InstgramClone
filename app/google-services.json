@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "842376255462",
+    "firebase_url": "https://instgram-1f15c.firebaseio.com",
+    "project_id": "instgram-1f15c",
+    "storage_bucket": "instgram-1f15c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:842376255462:android:006d125929c9347a",
+        "android_client_info": {
+          "package_name": "com.example.instgramclone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "842376255462-4mvbeucls1hob6gv3r4kpf3e69544hav.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.instgramclone",
+            "certificate_hash": "376e9ecf6a9595b406be1d8d5139e2a9fc597102"
+          }
+        },
+        {
+          "client_id": "842376255462-c0klu547kprg1eda4o0jqlntu0mihvvi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsRaMs-rtiYhiI4mMnhY-bo3BYGzpc5gw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "842376255462-c0klu547kprg1eda4o0jqlntu0mihvvi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
