@@ -23,6 +23,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.instgramclone.Adapter.MyFotoAdapter;
+import com.example.instgramclone.EditProfileActivity;
 import com.example.instgramclone.Model.Post;
 import com.example.instgramclone.Model.User;
 import com.example.instgramclone.R;
@@ -128,7 +129,7 @@ public class ProfileFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 String btn = edit_profile.getText().toString();
-
+                    startActivity(new Intent(getContext(), EditProfileActivity.class));
                 if (btn.equals("Edit Profile")){
 
                 }else if (btn.equals("follow")){
