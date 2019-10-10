@@ -129,9 +129,9 @@ public class ProfileFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 String btn = edit_profile.getText().toString();
-                    startActivity(new Intent(getContext(), EditProfileActivity.class));
-                if (btn.equals("Edit Profile")){
 
+                if (btn.equals("Edit Profile")){
+                    startActivity(new Intent(getContext(), EditProfileActivity.class));
                 }else if (btn.equals("follow")){
                     FirebaseDatabase.getInstance().getReference().child("follow").child(firebaseUser.getUid()).child("following")
                             .child(profileid).setValue(true);
