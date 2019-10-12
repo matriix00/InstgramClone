@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.instgramclone.CommentActivity;
+import com.example.instgramclone.FollowersActivity;
 import com.example.instgramclone.Fragment.PostDetailFragment;
 import com.example.instgramclone.Fragment.ProfileFragment;
 import com.example.instgramclone.Model.Post;
@@ -136,6 +137,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
             }
         });
 
+
         holder.like.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -170,6 +172,16 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
                 Intent intent = new Intent(mContext, CommentActivity.class);
                 intent.putExtra("postid",post.getPostid());
                 intent.putExtra("publisherid",post.getPublisher());
+                mContext.startActivity(intent);
+            }
+        });
+
+        holder.likes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, FollowersActivity.class);
+                intent.putExtra("id",post.getPostid());
+                intent.putExtra("title","likes");
                 mContext.startActivity(intent);
             }
         });

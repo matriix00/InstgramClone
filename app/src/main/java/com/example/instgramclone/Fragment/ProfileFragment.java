@@ -24,6 +24,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.example.instgramclone.Adapter.MyFotoAdapter;
 import com.example.instgramclone.EditProfileActivity;
+import com.example.instgramclone.FollowersActivity;
 import com.example.instgramclone.Model.Post;
 import com.example.instgramclone.Model.User;
 import com.example.instgramclone.R;
@@ -183,6 +184,28 @@ public class ProfileFragment extends Fragment {
                recyclerView_saves.setVisibility(View.VISIBLE);
            }
        });
+
+
+       followers.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View view) {
+               Intent intent = new Intent(getContext(), FollowersActivity.class);
+               intent.putExtra("id",profileid);
+               intent.putExtra("title","followers");
+               startActivity(intent);
+
+           }
+       });
+       following.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View view) {
+
+               Intent intent = new Intent(getContext(), FollowersActivity.class);
+               intent.putExtra("id",profileid);
+               intent.putExtra("title","following");
+               startActivity(intent);           }
+       });
+
         return view;
     }
     private void addNotification(){
