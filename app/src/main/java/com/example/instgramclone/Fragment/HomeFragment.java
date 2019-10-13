@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.example.instgramclone.Adapter.PostAdapter;
@@ -32,6 +33,9 @@ public class HomeFragment extends Fragment {
 
 
     private static final String TAG = "HomeFragment";
+
+    ProgressBar progressBar;
+
 
     private RecyclerView recyclerView;
     private PostAdapter postAdapter;
@@ -55,6 +59,9 @@ public class HomeFragment extends Fragment {
         postAdapter = new PostAdapter(getContext(),postLists);
 
         recyclerView.setAdapter(postAdapter);
+
+        progressBar = view.findViewById(R.id.progress_circular);
+
         checkFollowing();
 
 
@@ -105,6 +112,8 @@ public class HomeFragment extends Fragment {
                 }
 
                 postAdapter.notifyDataSetChanged();
+                progressBar.setVisibility(View.GONE);
+
             }
 
             @Override

@@ -27,6 +27,7 @@ import com.example.instgramclone.EditProfileActivity;
 import com.example.instgramclone.FollowersActivity;
 import com.example.instgramclone.Model.Post;
 import com.example.instgramclone.Model.User;
+import com.example.instgramclone.OptionsActivity;
 import com.example.instgramclone.R;
 import com.example.instgramclone.StartActivity;
 import com.google.firebase.auth.FirebaseAuth;
@@ -164,6 +165,14 @@ public class ProfileFragment extends Fragment {
 
             }
         });*/
+
+        options.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               Intent intent = new Intent(getContext(), OptionsActivity.class);
+               startActivity(intent);
+            }
+        });
 
        my_fotos.setOnClickListener(new View.OnClickListener() {
            @Override
